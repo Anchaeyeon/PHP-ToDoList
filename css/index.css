@@ -34,8 +34,33 @@ body {
 }
 
 #wrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: 8fr 4fr;
-    gap: 1em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#wrapper input {
+    flex: 1;
+    font-family: 'GowunDodum-Regular';
+    background-color: transparent;
+    color: black;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 1em 0.5em;
+}
+
+#wrapper input:focus {
+    outline: none;
+    border-color: pink;
+}
+
+#add-btn input {
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: pink;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
 }
