@@ -122,3 +122,11 @@ table tr:last-child td {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+
+.checkbox {
+    display: none;
+}
+
+.checkbox:checked + label {
+    text-decoration: line-through;
+}
