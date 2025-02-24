@@ -50,11 +50,14 @@
 
             for ($i = 0; $i < $cnt; $i++) {
                 $item = mysqli_fetch_row($result);
-                // 아이템 ID를 체크박스의 ID로 사용
-                echo "<tr><td>
-                        <input type='checkbox' id='$item[0]' class='checkbox'>
-                        <label for='$item[0]'>$item[1]</label>
-                      </td></tr>";
+                echo "<tr>
+                        <td>
+                            <input type='checkbox' id='$item[0]' class='checkbox'>
+                            <label for='$item[0]'>$item[1]</label>
+                            <a href='edit.php?id=$item[0]'>수정</a>
+                            <a href='delete.php?id=$item[0]'>삭제</a>
+                        </td>
+                      </tr>";
             }
 
             // 연결 닫기
