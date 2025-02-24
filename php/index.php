@@ -25,7 +25,7 @@
     <div class="todo-container">
         <table>
             <tr>
-                <th>todo</th>
+                <th>To Do List</th>
             </tr>
 
             <?php

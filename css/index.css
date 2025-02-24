@@ -87,6 +87,7 @@ table {
 }
 
 th {
+    font-family: 'GowunDodum-Regular';
     background-color: palevioletred;
     color: #f1f8fb;
     padding: 12px;
@@ -97,14 +98,14 @@ th {
 
 td {
     padding: 12px;
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     border-bottom: 1px solid lightslategray;
     background-color: #f1f8fb;
 }
 
 td:first-child {
-    font-weight: bold;
+    font-family: 'GowunDodum-Regular';
     background-color: rgb(255, 225, 230);
 }
 
