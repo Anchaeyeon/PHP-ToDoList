@@ -4,9 +4,12 @@ $conn = mysqli_connect('localhost', 'root', '111111', 'mysql');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $todo = $_POST['add_todo'];
 
-    // 데이터 삽입
-    $insertTodo = "insert into todolist (todo) values ('$todo')";
-    mysqli_query($conn, $insertTodo);
+    if (!empty($todo)) {
+        $insertTodo = "insert into todolist (todo) values ('$todo')";
+        mysqli_query($conn, $insertTodo);
+    } else {
+        echo "<script>alert('빈 칸으로 작성할 수 없습니다. 할 일을 입력해주세요!');</script>";
+    }
 }
 ?>
 
