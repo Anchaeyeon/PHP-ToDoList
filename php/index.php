@@ -18,5 +18,6 @@
         </div>
         <p id="error">빈 칸으로 작성할 수 없습니다.</p>
     </div>
+    <script src="../js/index.js"></script>
 </body>
 </html>
