@@ -54,8 +54,10 @@
                         <td>
                             <input type='checkbox' id='$item[0]' class='checkbox'>
                             <label for='$item[0]'>$item[1]</label>
-                            <a href='edit.php?id=$item[0]'>수정</a>
-                            <a href='delete.php?id=$item[0]'>삭제</a>
+                            <div class='todo-button'>
+                                <a href='edit.php?id=$item[0]' class='edit-todo'>수정</a>
+                                <a href='delete.php?id=$item[0]' class='delete-todo'>삭제</a>
+                            </div>
                         </td>
                       </tr>";
             }

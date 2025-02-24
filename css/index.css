@@ -102,6 +102,9 @@ td {
     font-size: 14px;
     border-bottom: none;
     background-color: #f1f8fb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 td:first-child {
@@ -129,4 +132,24 @@ table tr:last-child td {
 
 .checkbox:checked + label {
     text-decoration: line-through;
+}
+
+/* 삭제 & 수정 css */
+.todo-button {
+    display: flex;
+    gap: 4px;
+}
+
+.edit-todo, .delete-todo {
+    color: black;
+    text-decoration: none;
+    padding: 3px 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.edit-todo:hover, .delete-todo:hover {
+    background-color: black;
+    color: white;
 }
