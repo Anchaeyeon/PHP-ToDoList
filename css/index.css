@@ -100,7 +100,7 @@ td {
     padding: 12px;
     text-align: left;
     font-size: 14px;
-    border-bottom: 1px solid lightslategray;
+    border-bottom: none;
     background-color: #f1f8fb;
 }
 
@@ -110,7 +110,7 @@ td:first-child {
 }
 
 td:last-child {
-    border-bottom: 1px solid lightslategray;
+    border-bottom: none;
 }
 
 table tr:first-child th {
