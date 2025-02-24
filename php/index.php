@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </form>
         </div>
-        <p id="error">빈 칸으로 작성할 수 없습니다.</p>
     </div>
 </body>
 </html>
