@@ -5,12 +5,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $todo = $_POST['add_todo'];
 
     if (!empty($todo)) {
+        // 데이터 저장
         $insertTodo = "insert into todolist (todo) values ('$todo')";
         mysqli_query($conn, $insertTodo);
     } else {
         echo "<script>alert('빈 칸으로 작성할 수 없습니다. 할 일을 입력해주세요!');</script>";
     }
 }
+
+// 데이터 가져오기
+$sql = "select * from todolist order BY id desc";
+$result = mysqli_query($conn, $sql);
+$cnt = mysqli_num_rows($result);
+
+for ($i = 0; $i < $cnt; $i++) {
+    $item = mysqli_fetch_row($result);
+    echo "<tr><td>$item[1]</td></tr>";
+}
+
+// 연결 닫기
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
