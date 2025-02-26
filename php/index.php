@@ -61,25 +61,29 @@
                         </td>
                       </tr>";
             }
-
-            // 수정 폼 표시
-            if (isset($_GET['id'])) {
-                $id = $_GET['id'];
-                $sql_edit = "select * from todolist where id = '$id'";
-                $result_edit = mysqli_query($conn, $sql_edit);
-                $row = mysqli_fetch_assoc($result_edit);
-
-                echo "<form method='post' action='update.php?id=$id'>
-                        <input type='text' name='edit_todo' value='".htmlspecialchars($row['todo'])."'/>
-                        <input type='submit' value='수정하기'/>
-                      </form>";
-            }
-
-            // 연결 닫기
-            mysqli_close($conn);
             ?>
         </table>
     </div>
+
+    <?php
+    // 수정 폼 표시
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $sql_edit = "select * from todolist where id = '$id'";
+        $result_edit = mysqli_query($conn, $sql_edit);
+        $row = mysqli_fetch_assoc($result_edit);
+
+        echo "<form method='post' action='update.php?id=$id'>
+                <div class='edit-container'>
+                    <input type='text' name='edit_todo' value='".htmlspecialchars($row['todo'])."'/>
+                    <input type='submit' value='수정하기'/>
+                </div>
+              </form>";
+    }
+    
+    // 연결 닫기
+    mysqli_close($conn);
+    ?>
 </body>
 
 </html>

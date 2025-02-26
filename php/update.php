@@ -16,7 +16,7 @@ if (!$row) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $todo = $_POST['edit_todo'];
 
-    date_default_timezone_set("Asia/Seoul");
+    date_default_timezone_set("Asia/Seoul"); //서울 시간으로 설정
     $regDate = date("Y-m-d H:i:s"); // 현재 시간을 작성시간으로 설정
 
     $todo_update = "update todolist set todo='$todo', regDate='$regDate' where id=$id";
