@@ -39,6 +39,7 @@
         // 수정 폼 표시
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
+            
             $sql_edit = "select * from todolist where id = '$id'";
             $result_edit = mysqli_query($conn, $sql_edit);
             $row = mysqli_fetch_assoc($result_edit);
