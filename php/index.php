@@ -39,15 +39,19 @@
         // 수정 폼 표시
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            
+
             $sql_edit = "select * from todolist where id = '$id'";
             $result_edit = mysqli_query($conn, $sql_edit);
             $row = mysqli_fetch_assoc($result_edit);
 
             echo "<div class='edit-container active'>
                     <form method='post' action='update.php?id=$id'>
-                        <input type='text' name='edit_todo' value='".htmlspecialchars($row['todo'])."'/>
-                        <input type='submit' value='완료'/>
+                        <div id='edit-wrapper'>
+                            <input type='text' name='edit_todo' value='".htmlspecialchars($row['todo'])."'/>
+                            <div id='edit-btn'>
+                                <input type='submit' value='Ok'/>
+                            </div>
+                        </div>
                     </form>
                   </div>";
         }

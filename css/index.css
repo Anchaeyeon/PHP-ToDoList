@@ -164,5 +164,38 @@ table tr:last-child td {
 }
 
 .edit-container.active {
-    display: block; /* 수정할 때만 표시 */
+    display: block; /* 수정버튼 눌렀을 때만 표시 */
+}
+
+#edit-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#edit-wrapper input {
+    flex: 1;
+    font-family: 'GowunDodum-Regular';
+    background-color: transparent;
+    color: black;
+    font-size: 0.9em;
+    border: none;
+    border-bottom: 2px solid #d1d3d4;
+    padding: 1em 0.5em;
+}
+
+#edit-wrapper input:focus {
+    outline: none;
+    border-color: pink;
+}
+
+#edit-btn input {
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: pink;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: white;
 }
