@@ -55,11 +55,24 @@
                             <input type='checkbox' id='$item[0]' class='checkbox'>
                             <label for='$item[0]'>$item[1]</label>
                             <div class='todo-button'>
-                                <a href='edit.php?id=$item[0]' class='edit-todo'>수정</a>
+                                <a href='index.php?id=$item[0]' class='edit-todo'>수정</a>
                                 <a href='delete.php?id=$item[0]' class='delete-todo'>삭제</a>
                             </div>
                         </td>
                       </tr>";
+            }
+
+            // 수정 폼 표시
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+                $sql_edit = "select * from todolist where id = '$id'";
+                $result_edit = mysqli_query($conn, $sql_edit);
+                $row = mysqli_fetch_assoc($result_edit);
+
+                echo "<form method='post' action='update.php?id=$id'>
+                        <input type='text' name='edit_todo' value='".htmlspecialchars($row['todo'])."'/>
+                        <input type='submit' value='수정하기'/>
+                      </form>";
             }
 
             // 연결 닫기
